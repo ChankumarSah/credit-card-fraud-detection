@@ -290,29 +290,57 @@ jupyter notebook
 
 ---
 
-# 📷 Project Preview
 
-## Dataset Analysis
+# 📊 Model Performance
 
-(Add Screenshot)
+The final deployed model is **Logistic Regression**, trained on a preprocessed dataset using **RobustScaler** and **SMOTE** to address class imbalance.
 
----
-
-## Confusion Matrix
-
-(Add Screenshot)
-
----
-
-## Classification Report
-
-(Add Screenshot)
+| Metric | Score |
+|---------|-------|
+| Accuracy | **99.11%** |
+| Precision | **14.11%** |
+| Recall | **85.26%** |
+| F1-Score | **24.22%** |
+| ROC-AUC | **96.07%** |
 
 ---
 
-## Model Performance
+## 📋 Classification Report
 
-(Add Screenshot)
+| Class | Precision | Recall | F1-Score | Support |
+|-------|----------:|-------:|---------:|--------:|
+| Legitimate (0) | **1.00** | **0.99** | **1.00** | **56,651** |
+| Fraud (1) | **0.14** | **0.85** | **0.24** | **95** |
+
+**Overall Accuracy:** **99.11%**
+
+---
+
+## 📉 Confusion Matrix
+
+| Actual \ Predicted | Legitimate | Fraud |
+|-------------------|-----------:|------:|
+| **Legitimate** | **56,158** | **493** |
+| **Fraud** | **14** | **81** |
+
+---
+
+## 📌 Interpretation
+
+- ✅ Correctly identified **81 out of 95 fraudulent transactions**.
+- ✅ Achieved a **high Recall (85.26%)**, ensuring most fraudulent transactions were detected.
+- ⚠️ Precision is relatively low because fraud detection is an **extremely imbalanced classification problem**, where prioritizing fraud detection (high recall) often results in more false positives.
+- ✅ Achieved an **ROC-AUC score of 96.07%**, indicating strong class discrimination capability.
+- ✅ The model correctly classified **56,158 legitimate transactions**, while only **14 fraudulent transactions** were missed.
+
+---
+
+## 💡 Business Impact
+
+- Detects the majority of fraudulent transactions before financial loss occurs.
+- Can be integrated into a real-time fraud monitoring system.
+- Supports risk-based transaction review by prioritizing suspicious transactions.
+- Helps financial institutions reduce fraud-related losses while maintaining high detection performance.
 
 ---
 
@@ -322,8 +350,7 @@ jupyter notebook
 
 **Data Analyst | Machine Learning Enthusiast | Python | SQL | Power BI**
 
-- GitHub: https://github.com/YOUR_USERNAME
-- LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+
 
 ---
 
